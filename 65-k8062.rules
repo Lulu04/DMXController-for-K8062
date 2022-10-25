@@ -1,0 +1,3 @@
+SUBSYSTEM=="usb*", ACTION=="add|change", ATTRS{idVendor}=="10cf", ATTRS{idProduct}=="8062", MODE="0666"
+SUBSYSTEM=="usb*", ACTION=="add|change", SYSFS{idVendor}=="10cf", SYSFS{idProduct}=="8062", MODE="0666"
+

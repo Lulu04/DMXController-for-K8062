@@ -1,0 +1,73 @@
+object FrameCursor: TFrameCursor
+  Left = 0
+  Height = 290
+  Top = 0
+  Width = 120
+  ClientHeight = 290
+  ClientWidth = 120
+  TabOrder = 0
+  DesignLeft = 324
+  DesignTop = 183
+  object Label1: TLabel
+    AnchorSideLeft.Control = TB
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = TB
+    AnchorSideRight.Side = asrBottom
+    Left = 0
+    Height = 23
+    Top = 2
+    Width = 120
+    Alignment = taCenter
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 2
+    Caption = '0'
+    Font.Height = 20
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object TB: TTrackBar
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Label1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Label2
+    Left = 0
+    Height = 237
+    Top = 30
+    Width = 120
+    Max = 255
+    OnChange = TBChange
+    Orientation = trVertical
+    Position = 0
+    Reversed = True
+    ShowSelRange = False
+    TickMarks = tmBoth
+    TickStyle = tsNone
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Top = 5
+    TabOrder = 0
+  end
+  object Label2: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 23
+    Top = 267
+    Width = 120
+    Alignment = taCenter
+    Anchors = [akLeft, akRight, akBottom]
+    Caption = '512'
+    Color = 1907997
+    Font.Color = 10526880
+    Font.Height = 20
+    Font.Style = [fsItalic]
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+end

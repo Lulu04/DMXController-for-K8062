@@ -1,0 +1,185 @@
+object Form1: TForm1
+  Left = 292
+  Height = 380
+  Top = 168
+  Width = 768
+  BorderIcons = [biSystemMenu]
+  Caption = '(very) Simple DMX Controller demo for Velleman K8062D'
+  ClientHeight = 380
+  ClientWidth = 768
+  Constraints.MinHeight = 380
+  Constraints.MinWidth = 768
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnResize = FormResize
+  OnShow = FormShow
+  LCLVersion = '2.0.12.0'
+  object Label1: TLabel
+    AnchorSideLeft.Control = Panel1
+    Left = 20
+    Height = 20
+    Top = 8
+    Width = 200
+    Caption = 'Velleman K8062 Device found :'
+    Font.Height = 20
+    Font.Style = [fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    AnchorSideLeft.Control = Label1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideBottom.Control = Label1
+    AnchorSideBottom.Side = asrBottom
+    Left = 225
+    Height = 20
+    Top = 8
+    Width = 46
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Left = 5
+    Caption = 'Label2'
+    Font.Height = 20
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object SpeedButton1: TSpeedButton
+    AnchorSideLeft.Control = Label2
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideBottom.Control = Label2
+    AnchorSideBottom.Side = asrBottom
+    Left = 291
+    Height = 19
+    Top = 9
+    Width = 54
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Left = 20
+    Caption = 'Search'
+    OnClick = SpeedButton1Click
+  end
+  object Label3: TLabel
+    AnchorSideLeft.Control = Panel1
+    AnchorSideBottom.Control = CBDevice
+    AnchorSideBottom.Side = asrBottom
+    Left = 20
+    Height = 20
+    Top = 36
+    Width = 21
+    Anchors = [akLeft, akBottom]
+    Caption = 'use'
+    Font.Height = 20
+    Font.Style = [fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object CBDevice: TComboBox
+    AnchorSideLeft.Control = Label3
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Label1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideBottom.Control = Label3
+    AnchorSideBottom.Side = asrBottom
+    Left = 49
+    Height = 28
+    Top = 28
+    Width = 156
+    BorderSpacing.Left = 8
+    Font.Height = 20
+    ItemHeight = 20
+    OnSelect = CBDeviceSelect
+    ParentFont = False
+    Style = csDropDownList
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = CBDevice
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 20
+    Height = 299
+    Top = 61
+    Width = 728
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Left = 20
+    BorderSpacing.Top = 5
+    BorderSpacing.Right = 20
+    BorderSpacing.Bottom = 20
+    BorderWidth = 1
+    BorderStyle = bsSingle
+    Color = 12171705
+    ParentColor = False
+    TabOrder = 1
+  end
+  object CBBank: TComboBox
+    AnchorSideRight.Control = Panel1
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Panel1
+    Left = 642
+    Height = 28
+    Top = 28
+    Width = 106
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Bottom = 2
+    Font.Height = 20
+    Font.Style = [fsBold]
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5'
+      '6'
+      '7'
+      '8'
+      '9'
+      '10'
+      '11'
+      '12'
+      '13'
+      '14'
+      '15'
+      '16'
+      '17'
+      '18'
+      '19'
+      '20'
+      '21'
+      '22'
+      '23'
+      '24'
+      '25'
+      '26'
+      '27'
+      '28'
+      '29'
+      '30'
+      '31'
+      '32'
+    )
+    OnSelect = CBBankSelect
+    ParentFont = False
+    Style = csDropDownList
+    TabOrder = 2
+    Text = '1'
+  end
+  object Label4: TLabel
+    AnchorSideLeft.Control = CBBank
+    AnchorSideBottom.Control = CBBank
+    Left = 642
+    Height = 20
+    Top = 8
+    Width = 39
+    Anchors = [akLeft, akBottom]
+    Caption = 'BANK'
+    Font.Height = 20
+    Font.Style = [fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+end
